@@ -1,0 +1,36 @@
+# What is mongodb?
+- MongoDB is a popular type of database used in backend development. It's chosen for its flexibility and scalability. Instead of storing data in tables like a traditional relational database, MongoDB stores data in flexible documents, similar to JSON format. This makes it easier to handle different types of data and adapt to changing needs in applications.
+
+# What is mongoose?
+- Mongoose is a popular library for Node.js that simplifies interactions with MongoDB databases. It's used in backend development to streamline tasks like defining data schemas, performing database operations, and enforcing data validation.
+
+# What is express?
+- Express is like a toolkit for building web applications with Node.js. It provides tools to handle things like responding to web requests, managing routes (the paths in a URL), and dealing with data. It's popular because it's simple and flexible, making it easy to create web apps and APIs.
+
+# CORS
+- CORS (Cross-Origin Resource Sharing) is a security feature implemented by web browsers to enable safe communication between different origins (domains). It allows web servers to specify which domains are permitted to access their resources. CORS prevents malicious websites from accessing sensitive data on other sites, ensuring secure interactions across the web.
+
+# dotenv
+- dotenv is a popular Node.js module that simplifies the management of environment variables in your applications. It allows developers to store configuration settings, such as database credentials or API keys, in a separate file (.env) rather than hardcoding them into the code. This enhances security and makes it easier to manage different configurations across different environments (e.g., development, testing, production).dotenv automatically loads these variables into the application's environment during runtime, making them accessible through the process.env object. This makes it convenient to access configuration values throughout the application without explicitly parsing the .env file.
+
+# multer
+- Multer is a middleware for Express and Node.js used to handle file uploads. It simplifies parsing multipart/form-data and storing files to disk. With Multer, you can define where to store files, what file types to accept, and more. It's commonly used in web applications for handling file uploads.
+
+# cookie parser
+- A cookie parser in backend development is middleware that automates the reading and interpreting of cookies sent by client browsers in HTTP requests. It extracts the Cookie header, breaks it down into individual key-value pairs, and attaches this parsed object to the request object (e.g., req.cookies). This allows easy access to cookies in your route handlers. 
+
+If you visit a site and your browser sends cookies like sessionId=abc123; username=johndoe, the cookie parser will take these cookies and make them available as an object like { sessionId: 'abc123', username: 'johndoe' }. You can then use this information in your server-side code to, for example, personalize your response based on the username.
+
+# cloudinary
+- Cloudinary works by providing developers with a platform to upload, store, manipulate, optimize, and deliver digital media assets like images and videos. 
+
+# bcrypt
+- bcrypt is a cryptographic hashing function often used for securely storing passwords in databases.
+
+- When a user creates or updates their password, bcrypt takes the password as input and generates a cryptographic hash, which is a fixed-length string of characters unique to that password.
+
+# mongoose-aggregate-paginate-v2
+- Aggregate pagination in Mongoose v2 is about breaking down large sets of data into smaller, manageable chunks, or "pages," for easier browsing. It involves using Mongoose's `.aggregate()` method along with pagination techniques to specify how many items to show per page and which page to display. This approach helps efficiently retrieve and display data from MongoDB collections, improving user experience when dealing with large datasets.
+
+# jsonwebtoken
+- JSON Web Token (JWT) is a compact, secure way of transmitting information between parties as a JSON object. It's commonly used for authentication and authorization in web applications.
