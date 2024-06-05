@@ -12,7 +12,7 @@ const userSchema = new Schema({
         type:String,
         required:true,
         unique:true,
-        lowecase:true,
+        lowercase:true,
         index:true,
         trim:true
     },
@@ -20,13 +20,13 @@ const userSchema = new Schema({
         type:String,
         required:true,
         unique:true,
-        lowecase:true,
+        lowercase:true,
         trim:true
     },
     fullName:{
         type:String,
         required:true,
-        lowecase:true,
+        lowercase:true,
         index:true,
         trim:true
     },
@@ -59,12 +59,12 @@ userSchema.pre("save" , async function(next){         //pre means next se pehle 
    next()
 })
 
-userSchema.method.isPasswordCorrect = async function(password){   //khud ke custom method bhi define kr sakte hai eg.isPasswordCorrect
+userSchema.methods.isPasswordCorrect = async function(password){   //khud ke custom method bhi define kr sakte hai eg.isPasswordCorrect
    return await bcrypt.compare(password ,this.password)           //bcrypt ke pass compare property hai compare password or jo iska password hai this.password it give values in tryue and false 
 }
 
-userSchema.method.generateAccessToken = function(){
-    jwt.sign({
+userSchema.methods.generateAccessToken = function(){
+   return jwt.sign({
         _id : this._id,
         email:this.email,
         username:this.username,
@@ -76,8 +76,8 @@ userSchema.method.generateAccessToken = function(){
     }
   )
 }
-userSchema.method.generateRefreshToken = function(){
-    jwt.sign({
+userSchema.methods.generateRefreshToken = function(){
+    return jwt.sign({
         _id : this._id,
     },
     process.env.REFRESH_TOKEN_SECRET,
